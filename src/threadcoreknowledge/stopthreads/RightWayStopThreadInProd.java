@@ -1,7 +1,7 @@
 package threadcoreknowledge.stopthreads;
 
 /**
- * catch了InterruptedException之后的优先选择：在方法签名中抛出异常
+ * 最佳实践1：catch了InterruptedException之后的优先选择：在方法签名中抛出异常
  * 那么run()就会强制try/catch（因为我们是重写run()，run()本身并没有抛出异常）
  * @Author: wenjun
  * @Date: 2019/10/10 16:41
@@ -10,6 +10,8 @@ public class RightWayStopThreadInProd implements Runnable {
 
     @Override
     public void run() {
+        //此时!Thread.currentThread().isInterrupted()不起作用是因为
+        //在sleep()中发生中断时，Interrupted标记被清除了
         while (true && !Thread.currentThread().isInterrupted()) {
             System.out.println("go");
             try {
