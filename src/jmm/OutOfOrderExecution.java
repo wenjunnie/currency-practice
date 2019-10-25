@@ -10,8 +10,8 @@ import java.util.concurrent.CountDownLatch;
  */
 public class OutOfOrderExecution {
 
-    private static int x = 0, y = 0;
-    private static int a = 0, b = 0;
+    private static int x = 0, y = 0;//加上volatile可禁止重排序
+    private static int a = 0, b = 0;//加上volatile可禁止重排序
 
     public static void main(String[] args) throws InterruptedException {
         int i = 0;
