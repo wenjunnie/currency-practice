@@ -3,7 +3,7 @@ package jmm;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 不适用于volatile的场景
+ * 适用于volatile的场景
  * @Author: wenjun
  * @Date: 2019/10/25 19:19
  */
