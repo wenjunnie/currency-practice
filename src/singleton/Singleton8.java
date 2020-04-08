@@ -6,7 +6,7 @@ package singleton;
  * @Author: wenjun
  * @Date: 2019/10/28 10:43
  */
-public enum  Singleton8 {
+public enum Singleton8 {
 
     INSTANCE;
 
